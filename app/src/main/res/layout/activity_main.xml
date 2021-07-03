@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="15dp"
+    android:padding="@dimen/_10sdp"
     android:background="@color/backgroundColor"
-    android:gravity="center_horizontal"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_lable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CALCULATE YOUR"
         android:textColor="@color/textColor"
-        android:textSize="25sp"
+        android:textSize="@dimen/_25ssp"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AGE"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:textSize="30sp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_25ssp"
         android:background="@color/ageTextColorBackground"
         />
 
@@ -34,53 +37,54 @@
         android:layout_height="wrap_content"
         android:text="IN MINUTES"
         android:textColor="@color/textColor"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:textSize="30sp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_25ssp"
         />
 
     <Button
         android:id="@+id/btn_date_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:backgroundTint="@color/teal_700"
         android:text="SELECT DATE"
-        android:textSize="20sp"
+        android:textSize="@dimen/_20ssp"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="@dimen/_40sdp"
         android:text="Selected Date"
-        android:textSize="25sp"
+        android:textSize="@dimen/_20ssp"
         android:textColor="@color/lightGreyTextColor"/>
     <TextView
         android:id="@+id/tv_selected_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:text=""
-        android:textSize="30sp"
+        android:textSize="@dimen/_25ssp"
         android:textColor="@color/textColor"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="@dimen/_40sdp"
         android:text="Your Age In Minutes"
-        android:textSize="25sp"
+        android:textSize="@dimen/_20ssp"
         android:textColor="@color/lightGreyTextColor"
         />
     <TextView
         android:id="@+id/tv_age_in_minutes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text=""
-        android:textSize="30sp"
+        android:textSize="@dimen/_25ssp"
         android:textColor="@color/lightGreyTextColor"
         />
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
