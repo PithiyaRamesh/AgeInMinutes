@@ -4,13 +4,9 @@ import android.app.DatePickerDialog
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import org.w3c.dom.Text
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -26,19 +22,19 @@ class MainActivity : AppCompatActivity() {
         tvAgeInMinutes = findViewById(R.id.tv_age_in_minutes)
         tvSelectedDate = findViewById(R.id.tv_selected_date)
 
-        btnSelectDate.setOnClickListener{ view->
-            clickDatePicker(view)
+        btnSelectDate.setOnClickListener{
+            clickDatePicker()
         }
 
     }
-    @RequiresApi(Build.VERSION_CODES.N)
-    fun clickDatePicker(view: View){
+
+    private fun clickDatePicker() {
         val myCalender = Calendar.getInstance()
         val year = myCalender.get(Calendar.YEAR)
         val month = myCalender.get(Calendar.MONTH)
         val dayOfMonth = myCalender.get(Calendar.DAY_OF_MONTH)
 
-        val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { mview, selectedYear, selectedMonth, selectedDayOfMonth ->
+        val dpd = DatePickerDialog(this, { mview, selectedYear, selectedMonth, selectedDayOfMonth ->
             val selectedDateStr = "$selectedDayOfMonth/${selectedMonth+1}/$selectedYear"
             tvSelectedDate!!.text = selectedDateStr
             val sdf = SimpleDateFormat("dd/MM/yyyy",Locale.ENGLISH)
